@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Chisa · Ultimate Girlfriend & Study Mate</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Debug status -->
+    <div id="debug-status" class="debug-hidden">🔍 Loading...</div>
+
+    <!-- Particle canvas -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Main container -->
+    <div class="app-container" id="appContainer">
+        <!-- Header -->
+        <header class="main-header">
+            <div class="header-left">
+                <i class="fas fa-water"></i>
+                <h1>WUTHERING WAVES</h1>
+            </div>
+            <div class="header-controls">
+                <button class="theme-toggle" id="themeToggle" title="Toggle day/night">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="lang-toggle" id="langToggle" title="Change language">
+                    <i class="fas fa-language"></i>
+                </button>
+                <button class="reset-btn" id="resetBtn">
+                    <i class="fas fa-redo-alt"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main content -->
+        <div class="main-content">
+            <!-- Left panel - Avatar -->
+            <div class="avatar-panel">
+                <div class="avatar-wrapper">
+                    <div class="avatar-glow" id="avatarGlow"></div>
+                    <div class="avatar-frame">
+                        <div id="chisaAvatar" class="chisa-avatar"></div>
+                    </div>
+                    <div class="emotion-badge" id="emotionTag">gentle</div>
+                    <div class="accessories-panel" id="accessoriesPanel">
+                        <button class="accessory-btn" data-accessory="glasses">
+                            <i class="fas fa-glasses"></i>
+                        </button>
+                        <button class="accessory-btn" data-accessory="ribbon">
+                            <i class="fas fa-ribbon"></i>
+                        </button>
+                        <button class="accessory-btn" data-accessory="cherry">
+                            <i class="fas fa-cherry-blossom"></i>
+                        </button>
+                    </div>
+                </div>
+                <h2 class="chisa-name">CHISA</h2>
+                <div class="voice-indicator" id="voiceIndicator">
+                    <span></span><span></span><span></span>
+                </div>
+                <div class="chisa-quote" id="chisaQuote">"I notice the small things..."</div>
+            </div>
+
+            <!-- Right panel - Chat -->
+            <div class="chat-panel">
+                <!-- Messages area -->
+                <div class="messages-area" id="messagesArea">
+                    <div class="message received">
+                        <div class="message-sender">Chisa</div>
+                        <div class="message-bubble" id="welcomeMessage">
+                            🌊 Hey there, my love! Ready to learn something amazing together? I've been waiting for you~ 💕
+                            <div class="message-reactions" id="reactions-0">
+                                <span class="reaction" data-reaction="❤️">❤️</span>
+                                <span class="reaction" data-reaction="😊">😊</span>
+                                <span class="reaction" data-reaction="🤔">🤔</span>
+                                <span class="reaction" data-reaction="😢">😢</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Typing indicator -->
+                <div class="typing-indicator" id="typingIndicator">
+                    <span></span><span></span><span></span>
+                    <span class="typing-text">Chisa is thinking...</span>
+                </div>
+
+                <!-- Games section -->
+                <div class="games-section" id="gamesSection">
+                    <div class="games-header" id="gamesHeader">
+                        <i class="fas fa-gamepad"></i>
+                        <span>Games with Chisa</span>
+                        <i class="fas fa-chevron-down" id="gamesToggle"></i>
+                    </div>
+                    <div class="games-content" id="gamesContent">
+                        <button class="game-btn" data-game="math">
+                            <i class="fas fa-calculator"></i> Math Quiz
+                        </button>
+                        <button class="game-btn" data-game="stocks">
+                            <i class="fas fa-chart-line"></i> Stock Simulator
+                        </button>
+                        <button class="game-btn" data-game="coding">
+                            <i class="fas fa-code"></i> Code Challenge
+                        </button>
+                        <button class="game-btn" data-game="trivia">
+                            <i class="fas fa-question"></i> Love Trivia
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Input area -->
+                <div class="input-area">
+                    <div class="input-wrapper">
+                        <i class="fas fa-feather input-icon"></i>
+                        <input 
+                            type="text" 
+                            id="userInput" 
+                            placeholder="Ask Chisa anything..." 
+                            autocomplete="off"
+                        >
+                        <button class="send-btn" id="sendBtn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <div class="input-hint">
+                        <i class="fas fa-chevron-up"></i>
+                        <span id="hintText">Your girlfriend & study mate · 150+ IQ</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
